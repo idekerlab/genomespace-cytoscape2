@@ -133,6 +133,8 @@
     <argument>org.genemania.plugin.GeneManiaPlugin</argument>
     <argument>-p</argument>
     <argument>org.reactome.cytoscape.ReactomeR3CytoscapePlugin</argument>
+    <argument>-p</argument>
+    <argument>org.baderlab.csplugins.enrichmentmap.Enrichment_Map_Plugin</argument>
   </application-desc>
 </jnlp>
 
