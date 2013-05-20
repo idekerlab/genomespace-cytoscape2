@@ -47,7 +47,7 @@ public class LaunchHelper {
 		// OK, all systems go!
 
 		String[] plugins = downloadPlugins();
-		String[] command = createCommand(getFile(path,exe),plugins);
+		String[] command = createCommand(getFile(path,exe),plugins, args);
 
 		storePreferredPath(path);
 
@@ -107,13 +107,16 @@ public class LaunchHelper {
 		return path;
 	}
 
-	private static String[] createCommand(final File f, final String[] plugins) {
-		String[] command = new String[ (plugins.length * 2) + 1];
+	private static String[] createCommand(final File f, final String[] plugins, final String[] args) {
+		String[] command = new String[1 + (plugins.length * 2) + (args.length)];
 		int i = 0;
 		command[i] = f.getAbsolutePath();
 		for ( String plugin : plugins ) {
 			command[++i] = "-p";
 			command[++i] = plugin;
+		}
+		for( String arg: args) {
+			command[++i] = arg;
 		}
 		return command;
 	}

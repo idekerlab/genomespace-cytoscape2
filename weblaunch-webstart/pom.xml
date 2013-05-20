@@ -62,7 +62,7 @@
           <jnlp>
             <inputTemplateResourcePath>${project.basedir}/src/main/jnlp</inputTemplateResourcePath>
             <inputTemplate>template.vm</inputTemplate>
-            <outputFile>cytoscape.jnlp</outputFile>
+            <outputFile>cytoscape.php</outputFile>
             <mainClass>cytoscape.weblaunch.LaunchHelper</mainClass>
           </jnlp>
           <!-- 
